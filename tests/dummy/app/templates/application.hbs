@@ -1,3 +1,4 @@
 <h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+{{#power-select-sortable options=options selected=selected onchange=(action (mut selected)) as |num|}}
+  {{num}}
+{{/power-select-sortable}}
