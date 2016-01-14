@@ -1,26 +1,22 @@
 # Ember-power-select-sortable
 
-This README outlines the details of collaborating on this Ember addon.
+This is a [Ember Power Select](http://www.ember-power-select.com) addon that leverages [ember-sortable](http://github.com/jgwhite/ember-sortable)
+to provide a multiple select whose selections can be sorted using drag and drop.
 
-## Installation
+## Usage
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+This addon contains one single component `{{#power-select-sortable}}` that takes the same configuration options
+then the regular `{{#power-select-multiple}}`.
 
-## Running
+```hbs
+{{#power-select-sortable options=options selected=selected onchange=(action (mut selected)) as |opt|}}
+  {{opt}}
+{{/power-select-sortable}}
+```
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+For more information about usage, check ember-power-select's [docs](http://www.ember-power-select.com/docs)
 
-## Running Tests
+## Next steps
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+* Add tests
+* Add animated gif to the readme
