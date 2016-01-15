@@ -38,12 +38,18 @@
     "ember-try": "~0.0.8"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-power-select-addon",
+    "ember-power-select",
+    "ember-sortable",
+    "select",
+    "sortable"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.5",
     "ember-cli-htmlbars": "^1.0.1",
-    "ember-power-select": "0.8.0-beta.7"
+    "ember-power-select": "0.8.0-beta.7",
+    "ember-sortable": "1.6.3"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
