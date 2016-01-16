@@ -16,6 +16,12 @@ then the regular `{{#power-select-multiple}}`.
 
 For more information about usage, check ember-power-select's [docs](http://www.ember-power-select.com/docs)
 
+## Can I get a taste of it?
+
+Go to [https://ember-power-select-sortable.pagefrontapp.com](https://ember-power-select-sortable.pagefrontapp.com) to see it in action.
+This addon was created as an example of how to build composable component in a live coding talk, but I've never used it myself.
+If you find any bug or edge case not covered, issues or PRs are welcome :)
+
 ## Next steps
 
 * Add tests
