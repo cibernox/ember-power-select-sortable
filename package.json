@@ -1,6 +1,6 @@
 {
   "name": "ember-power-select-sortable",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "The default blueprint for ember-cli addons.",
   "homepage": "https://ember-power-select-sortable.pagefrontapp.com",
   "directories": {
@@ -52,8 +52,8 @@
   "dependencies": {
     "ember-cli-babel": "^5.1.5",
     "ember-cli-htmlbars": "^1.0.1",
-    "ember-power-select": "^0.9.0-beta.2",
-    "ember-sortable": "^1.6.3"
+    "ember-power-select": "^0.10.0",
+    "ember-sortable": "^1.8.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

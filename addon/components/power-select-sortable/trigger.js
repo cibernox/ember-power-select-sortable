@@ -5,7 +5,7 @@ export default EmberPowerSelectMultipleTrigger.extend({
   layout,
   actions: {
     reorderItems(items) {
-      this.get('select').actions.choose(items);
+      this.get('select').actions.select(items);
     }
   }
 });
