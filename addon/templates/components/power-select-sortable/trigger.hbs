@@ -1,5 +1,5 @@
 {{#sortable-group tagName="ul"
-  id=(concat "ember-power-select-multiple-options-" select._id)
+  id=(concat "ember-power-select-multiple-options-" select.uniqueId)
   class="ember-power-select-multiple-options"
   onChange=(action "reorderItems")
   direction="x" as |group|}}
