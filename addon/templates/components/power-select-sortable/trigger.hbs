@@ -1,32 +1,38 @@
 {{#sortable-group tagName="ul"
-  id=(concat elementId "-ember-power-select-multiple-options")
+  id=(concat "ember-power-select-multiple-options-" select.uniqueId)
   class="ember-power-select-multiple-options"
   onChange=(action "reorderItems")
   direction="x" as |group|}}
-  {{#each selected as |opt idx|}}
+  {{#each select.selected as |opt idx|}}
     {{#sortable-item tagName="li" class="ember-power-select-multiple-option" model=opt group=group}}
-      {{#unless disabled}}
+      {{#unless select.disabled}}
         <span role="button"
-          aria-label="remove element"
-          class="ember-power-select-multiple-remove-btn"
-          data-selected-index={{idx}}>&times;</span>
+              aria-label="remove element"
+              class="ember-power-select-multiple-remove-btn"
+              data-selected-index={{idx}}>
+          &times;
+        </span>
       {{/unless}}
       {{#if selectedItemComponent}}
-        {{component selectedItemComponent selected=opt lastSearchedText=lastSearchedText}}
+        {{component selectedItemComponent option=(readonly opt) select=(readonly select)}}
       {{else}}
-        {{yield opt lastSearchedText}}
+        {{yield opt select}}
       {{/if}}
     {{/sortable-item}}
   {{/each}}
   {{#if searchEnabled}}
-    <input type="search" class="ember-power-select-trigger-multiple-input {{elementId}}-input"
-      tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-      style={{triggerMultipleInputStyle}}
-      aria-controls={{listboxId}}
-      placeholder={{maybePlaceholder}}
-      disabled={{disabled}}
-      oninput={{action "handleInput"}}
-      onkeydown={{action "handleKeydown"}}>
+    <input type="search" class="ember-power-select-trigger-multiple-input"
+           tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+           id="ember-power-select-trigger-multiple-input-{{select._id}}"
+           value={{select.searchText}}
+               aria-controls={{listboxId}}
+           style={{triggerMultipleInputStyle}}
+               placeholder={{maybePlaceholder}}
+           disabled={{select.disabled}}
+               oninput={{action "onInput"}}
+           onFocus={{activate}}
+               onBlur={{onBlur}}
+           onkeydown={{action "onKeydown"}}>
   {{/if}}
 {{/sortable-group}}
 <span class="ember-power-select-status-icon"></span>
