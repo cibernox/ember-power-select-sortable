@@ -1,4 +1,4 @@
-/* jshint node: true */
+/* eslint-env node */
 'use strict';
 
 module.exports = {
@@ -7,10 +7,10 @@ module.exports = {
     this._super.included.apply(this, arguments);
   },
 
-  contentFor: function(type, config) {
-    var emberPowerSelect = this.addons.filter(function(addon) {
+  contentFor(type, config) {
+    var emberPowerSelect = this.addons.find(function(addon) {
       return addon.name === 'ember-power-select';
-    })[0]
+    })
     return emberPowerSelect.contentFor(type, config);
   }
 };
